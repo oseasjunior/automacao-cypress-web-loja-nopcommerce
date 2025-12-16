@@ -1,5 +1,5 @@
-# automacao-cypress-web-loja-nopcommerce
-Este projeto contém testes automatizados para a página da loja fictícia nopcommerce
+# automacao-cypress-web-loja-Swag Labs
+Este projeto contém testes automatizados para a página da loja fictícia Swag Labs
 
 ## Estrutura
 
@@ -10,7 +10,7 @@ Este projeto contém testes automatizados para a página da loja fictícia nopco
 ## Pré-requisitos
 
 - Node.js instalado
-- Cypress instalado (`npm install cypress`)
+- Cypress instalado  v15.7.1 (`npm install cypress`)
 
 ## Como executar os testes
 
@@ -44,8 +44,6 @@ npm run cy:run:edge
 - **Testes**:
   - Login válido
   - Login inválido
-  - E-mail curto
-  - E-mail vazio
 
 ## Observações
 

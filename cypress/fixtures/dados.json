@@ -1,11 +1,11 @@
 {
   "nome": "Alana Beatriz da Silva",
-  "email": "admin@yourstore.com",
-  "senha": "admin",
+  "email": "standard_user",
+  "senha": "secret_sauce",
   "email_invalido": "alana@gmail.com",
   "senha_invalida": "12345",
   "email_curto": "a@b.c",
-  "mensagem_erro": "Login was unsuccessful. Please correct the errors and try again.No customer account found\n",
+  "mensagem_erro": "Epic sadface: Username and password do not match any user in this service",
   "mensagem_erro_email_curto": "Wrong email",
   "mensagem_erro_email_vazio": "Please enter your email"
 }

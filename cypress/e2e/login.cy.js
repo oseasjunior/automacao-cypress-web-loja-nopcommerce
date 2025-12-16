@@ -27,7 +27,7 @@ describe("testes pagina login", () => {
     });
   });
 
-  it("teste pagina login invalido", () => {
+ it("teste pagina login invalido", () => {
     cy.get("@dados").then((dados) => {
       const loginPage = new LoginPage();
       loginPage.acessarPaginaLogin();
@@ -37,27 +37,5 @@ describe("testes pagina login", () => {
     });
   });
 
-  it("teste pagina login email curto", () => {
-    cy.get("@dados").then((dados) => {
-      const loginPage = new LoginPage();
-      loginPage.acessarPaginaLogin();
-      loginPage.loginInvalido(dados.email_curto, dados.senha_invalida);
-      loginPage.submit();
-      loginPage
-        .mensagemEmailCurto()
-        .should("contain.text", dados.mensagem_erro_email_curto);
-    });
-  });
-
-  it("teste pagina login email vazio", () => {
-    cy.get("@dados").then((dados) => {
-      const loginPage = new LoginPage();
-      loginPage.acessarPaginaLogin();
-      loginPage.loginVazio(dados.senha);
-      loginPage.submit();
-      loginPage
-        .mensagemEmailCurto()
-        .should("contain.text", dados.mensagem_erro_email_vazio);
-    });
-  });
+  
 });

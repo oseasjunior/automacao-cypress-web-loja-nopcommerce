@@ -1,13 +1,11 @@
-
-  {
+{
   "name": "automacao-cypress-web-loja-nopcommerce",
   "version": "1.0.0",
   "scripts": {
     "cy:run:chrome": "cypress run --browser chrome",
     "cy:run:edge": "cypress run --browser edge"
-    
   },
   "devDependencies": {
-    "cypress": "^12.17.1"
+    "cypress": "^15.7.1"
   }
 }
