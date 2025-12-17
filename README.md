@@ -1,5 +1,5 @@
-# automacao-cypress-web-loja-Swag Labs
-Este projeto contém testes automatizados para a página da loja fictícia Swag Labs
+# automacao-cypress-web-loja-saucedemo
+Este projeto contém testes automatizados para a página da loja fictícia saucedemo
 
 ## Estrutura
 
