@@ -7,5 +7,6 @@
   "email_curto": "a@b.c",
   "mensagem_erro": "Epic sadface: Username and password do not match any user in this service",
   "mensagem_erro_email_curto": "Wrong email",
-  "mensagem_erro_email_vazio": "Please enter your email"
+  "mensagem_erro_email_vazio": "Epic sadface: Username is required",
+  "mensagem_erro_senha_vazia": "Epic sadface: Password is required"
 }

@@ -10,7 +10,7 @@ Este projeto contém testes automatizados para a página da loja fictícia sauce
 ## Pré-requisitos
 
 - Node.js instalado
-- Cypress instalado  v15.7.1 (`npm install cypress`)
+- Cypress instalado  v15.7.1 (`npm install cypress@15.7.1 --save-dev`)
 
 ## Como executar os testes
 
