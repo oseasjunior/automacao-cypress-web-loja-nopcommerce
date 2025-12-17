@@ -16,25 +16,25 @@ describe("testes menu Hamburguer", () => {
         cy.clearLocalStorage();
     });
 
-        it("teste de exibição burguer menu", () => {
+        it("Deve exibir burguer menu", () => {
                 burguerMenuPage.acessarBurguerMenu();
                 burguerMenuPage.getBurguerMenu().should("be.visible");
             });
       
 
-        it("teste de fechamento burguer menu", () => {
+        it("Deve fechar burguer menu", () => {
                 burguerMenuPage.acessarBurguerMenu();
                 burguerMenuPage.getBurguerMenu().should("be.visible");
                 burguerMenuPage.fecharBurguerMenu();
                 burguerMenuPage.getBurguerMenu().should("not.be.visible");
             }); 
 
-        it("teste link About", () => {
+        it("Deve exibir link About", () => {
                 burguerMenuPage.acessarBurguerMenu();
                 burguerMenuPage.validaLinkAbout();
             });
 
-        it("teste link Logout", () => {
+        it("Deve realizar Logout atravez do link Logout", () => {
                 burguerMenuPage.acessarBurguerMenu();
                 burguerMenuPage.validaLinkAbout();
                 burguerMenuPage.clickLogout();
