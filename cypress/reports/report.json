@@ -1,0 +1,162 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "start": "2025-12-17T12:21:03.803Z",
+    "end": "2025-12-17T12:21:09.107Z",
+    "duration": 5304
+  },
+  "results": [
+    {
+      "uuid": "15e55830-0cba-48f3-b881-30d7f5df568d",
+      "title": "",
+      "fullFile": "cypress\\e2e\\login.cy.js",
+      "file": "cypress\\e2e\\login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "57236aef-54a0-4f61-b5d6-981b0351e73c",
+          "title": "testes pagina login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "teste pagina login valido",
+              "fullTitle": "testes pagina login teste pagina login valido",
+              "timedOut": null,
+              "duration": 1894,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"@dados\").then(dados => {\n  loginPage.acessarPaginaLogin();\n  loginPage.login(dados.email, dados.senha);\n  loginPage.submit();\n  loginPage.getDashboard().should(\"be.visible\");\n});",
+              "err": {},
+              "uuid": "586610aa-71b9-49fd-882b-5eaddddaced8",
+              "parentUUID": "57236aef-54a0-4f61-b5d6-981b0351e73c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "teste pagina login invalido",
+              "fullTitle": "testes pagina login teste pagina login invalido",
+              "timedOut": null,
+              "duration": 805,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"@dados\").then(dados => {\n  loginPage.acessarPaginaLogin();\n  loginPage.loginInvalido(dados.email_invalido, dados.senha_invalida);\n  loginPage.submit();\n  loginPage.mensagemErroLogin().should(\"contain.text\", dados.mensagem_erro);\n});",
+              "err": {},
+              "uuid": "0538b0fd-ea58-4caa-aeeb-768d14f5eb8b",
+              "parentUUID": "57236aef-54a0-4f61-b5d6-981b0351e73c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "teste pagina login com email vazio",
+              "fullTitle": "testes pagina login teste pagina login com email vazio",
+              "timedOut": null,
+              "duration": 708,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"@dados\").then(dados => {\n  loginPage.acessarPaginaLogin();\n  loginPage.loginInvalido(\"{rightArrow}\", dados.senha);\n  loginPage.submit();\n  loginPage.mensagemErroLogin().should(\"contain.text\", dados.mensagem_erro_email_vazio);\n});",
+              "err": {},
+              "uuid": "6b69cc93-5b29-46af-a556-36930849576d",
+              "parentUUID": "57236aef-54a0-4f61-b5d6-981b0351e73c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "teste pagina login com senha vazia",
+              "fullTitle": "testes pagina login teste pagina login com senha vazia",
+              "timedOut": null,
+              "duration": 729,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"@dados\").then(dados => {\n  loginPage.acessarPaginaLogin();\n  loginPage.loginInvalido(dados.email, \"{rightArrow}\");\n  loginPage.submit();\n  loginPage.mensagemErroLogin().should(\"contain.text\", dados.mensagem_erro_senha_vazia);\n});",
+              "err": {},
+              "uuid": "d5b69847-59ed-470e-9275-51e477600698",
+              "parentUUID": "57236aef-54a0-4f61-b5d6-981b0351e73c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "586610aa-71b9-49fd-882b-5eaddddaced8",
+            "0538b0fd-ea58-4caa-aeeb-768d14f5eb8b",
+            "6b69cc93-5b29-46af-a556-36930849576d",
+            "d5b69847-59ed-470e-9275-51e477600698"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4136,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}
