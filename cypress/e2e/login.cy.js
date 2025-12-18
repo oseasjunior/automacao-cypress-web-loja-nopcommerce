@@ -3,10 +3,10 @@
 import loginPage from "./pages/loginPage";
 
 
-describe("testes pagina login", () => {
+describe("Funcionalidade login", () => {
   beforeEach(() => {
     // Executa antes de cada teste
-    cy.fixture("dados").as("dados");
+    cy.fixture("login").as("login");
     loginPage.acessarPaginaLogin();
   });
 
@@ -17,43 +17,43 @@ describe("testes pagina login", () => {
     cy.clearLocalStorage();
   });
 
-  it("teste pagina login valido", () => {
-    cy.get("@dados").then((dados) => {
+  it("Deve realizar login valido", () => {
+    cy.get("@login").then((login) => {
       loginPage.acessarPaginaLogin();
-      loginPage.login(dados.email, dados.senha);
+      loginPage.login(login.email, login.senha);
       loginPage.submit();
       loginPage.getDashboard().should("be.visible");
     });
   });
 
- it("teste pagina login invalido", () => {
-    cy.get("@dados").then((dados) => {
+ it("Deve exibir mensagem de erro login invalido", () => {
+    cy.get("@login").then((login) => {
       loginPage.acessarPaginaLogin();
-      loginPage.loginInvalido(dados.email_invalido, dados.senha_invalida);
+      loginPage.loginInvalido(login.email_invalido, login.senha_invalida);
       loginPage.submit();
-      loginPage.mensagemErroLogin().should("contain.text", dados.mensagem_erro);
+      loginPage.mensagemErroLogin().should("contain.text", login.mensagem_erro);
     });
   });
 
-  it("teste pagina login com email vazio", () => {
-    cy.get("@dados").then((dados) => {
+  it("Deve exibir mensagem de erro login com email vazio", () => {
+    cy.get("@login").then((login) => {
       loginPage.acessarPaginaLogin();
-      loginPage.loginInvalido( "{rightArrow}", dados.senha);
+      loginPage.loginInvalido( "{rightArrow}", login.senha);
       loginPage.submit();
       loginPage
         .mensagemErroLogin()
-        .should("contain.text", dados.mensagem_erro_email_vazio);
+        .should("contain.text", login.mensagem_erro_email_vazio);
     });
   });
 
-  it("teste pagina login com senha vazia", () => {
-    cy.get("@dados").then((dados) => {
+  it("Deve exibir mensagem de erro login com senha vazia", () => {
+    cy.get("@login").then((login) => {
       loginPage.acessarPaginaLogin();
-      loginPage.loginInvalido(dados.email, "{rightArrow}");
+      loginPage.loginInvalido(login.email, "{rightArrow}");
       loginPage.submit();
       loginPage
         .mensagemErroLogin()
-        .should("contain.text", dados.mensagem_erro_senha_vazia);
+        .should("contain.text", login.mensagem_erro_senha_vazia);
      });
   });
     

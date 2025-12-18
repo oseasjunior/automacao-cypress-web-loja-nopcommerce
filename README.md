@@ -5,11 +5,14 @@ Automação de testes E2E para a loja de demonstração *saucedemo* usando Cypre
 
 ## 🔧 Estrutura do projeto
 
-- `cypress/e2e/login.cy.js` — testes de login (válido, inválido, campos vazios).
+- `cypress/e2e/login.cy.js` — testes de login.
 - `cypress/e2e/burguerMenu.cy.js` — testes do menu hamburguer.
+- `cypress/e2e/products.cy.js` — testes da pagina produtos.
 - `cypress/e2e/pages/loginPage.js` — Page Object Model para a página de login.
-- `cypress/e2e/pages/burguerMenuPage.js` — Page Object Model para o menu Hamburguer
-- `cypress/fixtures/dados.json` — dados de teste (e-mails, senhas, mensagens).
+- `cypress/e2e/pages/burguerMenuPage.js` — Page Object Model para o menu Hamburguer.
+- `cypress/e2e/pages/productsPage.js` — Page Object Model para a página de produtos.
+- `cypress/fixtures/login.json` — dados de teste para a pagina de login (e-mails, senhas, mensagens).
+- `cypress/fixtures/products.json` — dados de teste para a pagina de produtos (nomes dos produtos, quantidades, mensagens).
 - `cypress/screenshots/` — screenshots gerados pelos testes.
 
 ---
@@ -84,7 +87,7 @@ npx cypress run --headed --browser chrome
 
 ## 💡 Dicas e observações
 
-> - Verifique `cypress/fixtures/dados.json` para modificar dados de teste.
+> - Verifique `cypress/fixtures` para modificar dados de teste.
 > - Capturas de tela são salvas em `cypress/screenshots/` por execução com falha.
 > - Caso precise gerar relatórios (mochawesome), configure scripts adicionais conforme necessário.
 
